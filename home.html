@@ -1,0 +1,90 @@
+<html>
+    <head>
+        <title>N A S T Y | Dashboard</title>
+        <link rel="stylesheet" href="main.css">
+        <link rel="shortcut icon" type="image/x-icon" href="logo.png" />
+
+        <!-- JavaScript -->
+    	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/1.1.4/typed.min.js"></script>
+
+        <link href="https://fonts.googleapis.com/css?family=Nova+Flat" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow" rel="stylesheet">
+
+        <!-- CSS -->
+        <style>
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #7289DA;
+        }
+
+        li {
+            float: right;
+        }
+
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        li a:hover {
+            background-color: #111;
+        }
+        </style>
+
+        
+        <script>
+            console.log(document.cookie);
+            if (!getCookie('user')) {
+                // Nothing
+            } else {
+                let user = JSON.parse(getCookie('user'));
+                document.writeln(`<img src=https://cdn.discordapp.com/avatars/${user.id}/${user.avatar}.png>`)
+                document.writeln(`<h1>Welcome back ${user.username}<i><span style="font-size: .5em;">#${user.discriminator}<span></i></h1>`)
+                document.writeln(`Your id is ${user.id}`);
+            }
+            function logout() {
+                setCookie('user', null, -100000);
+                location.reload();
+            }
+            function getCookie(cname) {
+                var name = cname + "=";
+                var decodedCookie = decodeURIComponent(document.cookie);
+                var ca = decodedCookie.split(';');
+                for(var i = 0; i <ca.length; i++) {
+                    var c = ca[i];
+                    while (c.charAt(0) == ' ') {
+                        c = c.substring(1);
+                    }
+                    if (c.indexOf(name) == 0) {
+                        return c.substring(name.length, c.length);
+                    }
+                }
+                return null;
+            }
+            function setCookie(cname, cvalue, exms) {
+                var d = new Date();
+                d.setTime(d.getTime() + exms);
+                var expires = "expires="+ d.toUTCString();
+                document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+            }
+        </script>
+    </head>
+
+    <body>
+
+        <ul>
+            <li><a onclick="logout();">Logout</a></li>
+            <li><a href="#">Add me!</a></li>
+            <li><a href="#">Support</a></li>
+            <li><a href="https://www.patreon.com/nastydiscordbot">Donate</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+    </body>

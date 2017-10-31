@@ -1,0 +1,85 @@
+<html>
+    <head>
+        <title>N A S T Y | Main</title>
+        <link rel="stylesheet" href="main.css">
+        <link rel="shortcut icon" type="image/x-icon" href="logo.png" />
+
+        <!-- JavaScript -->
+    	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/1.1.4/typed.min.js"></script>
+
+        <link href="https://fonts.googleapis.com/css?family=Nova+Flat" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow" rel="stylesheet">
+
+        <!-- CSS -->
+        <style>
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #7289DA;
+        }
+
+        li {
+            float: right;
+        }
+
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        li a:hover {
+            background-color: #111;
+        }
+        a {
+            text-decoration: none;
+        }
+        </style>
+
+    </head>
+
+    <body>
+        <div id="typed-strings">
+            <p>Moderation</p>
+            <p>Music</p>
+            <p>Fun</p>
+            <p>Custom (soon)</p>
+        </div>
+            
+        <div class="content">
+            <img src="nasty.png" alt="Logo"/>
+            <h1 class="nasty">N A S T Y</h1>
+            <p class="modules">Introducing N A S T Y, the Discord bot!</p>
+            <h2 class="modules">>> <b class="font"><span id="typed"></span></b></h2>
+            <a href="https://discordapp.com/oauth2/authorize?response_type=token&client_id=295292566855876611&scope=identify&redirect_uri=https://nastyybot.github.io/login.html" class="button">Connect to Discord</a>
+        </div>
+
+        <ul>
+            <li><a href="https://discordapp.com/oauth2/authorize?response_type=token&client_id=295292566855876611&scope=identify&redirect_uri=https://nastyybot.github.io/login.html">Login</a></li>
+            <li><a href="#">Add me!</a></li>
+            <li><a href="#">Support</a></li>
+            <li><a href="https://www.patreon.com/nastydiscordbot">Donate</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+
+        <div>
+            <p class="footer">Made by: ItsJustNasty#2146. Bot Hosters: Joël#0551 and xKingAura#1176. Website powered by <a href="">GitHub </a> </p>
+        </div>
+        <script>
+                $(function(){
+                    $("#typed").typed({
+                        stringsElement: $('#typed-strings'),
+                        startDelay: 500,
+                        backDelay: 2000,
+                        contentType: 'text',
+                        loop: true
+                    });
+                });
+            </script>
+    </body>
