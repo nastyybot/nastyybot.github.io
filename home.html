@@ -55,9 +55,6 @@
         <p class="textfloat">Welcome back, <span id="username"></span>!</p>
         
         <script>
-            if (!getCookie('user')) {
-                // Nothing NOTHING I TELL YOU
-            } else {
                 let user = JSON.parse(getCookie('user'));
                 let xhr = new XMLHttpRequest()
                 xhr.open('GET', 'https://discordapp.com/api/v6/users/@me', true);
@@ -70,7 +67,6 @@
                 document.getElementById('username').innerHTML = user.username;
                 document.getElementById('avatar').src = `https://cdn.discordapp.com/avatars/${user.id}/${user.avatar}.png`;
                 };
-           }
             function logout() {
                 setCookie('user', null, -100000);
                 location.reload();
