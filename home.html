@@ -59,7 +59,6 @@
                 // Nothing
             } else {
                 let user = JSON.parse(getCookie('user'));
-            }
                 let xhr = new XMLHttpRequest()
                 xhr.open('GET', 'https://discordapp.com/api/v6/users/@me', true);
                 xhr.setRequestHeader('Authorization', querys.token_type + " " + querys.access_token);
