@@ -70,7 +70,7 @@
                 };
             } else {
                 setCookie('access_token', 'delet this', -100000);
-                logout();
+                setTimeout(logout, 100);
             }
             function logout() {
                 window.location = "/index.html";
