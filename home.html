@@ -57,7 +57,7 @@
         <script>
             let xhr = new XMLHttpRequest()
             xhr.open('GET', 'https://discordapp.com/api/v6/users/@me', true);
-            xhr.setRequestHeader('Authorization', querys.token_type + " " + querys.access_token);
+            xhr.setRequestHeader('Authorization', getCookie('token_type') + " " + getCookie('access_token'));
             xhr.send();
             xhr.onloadend = (e) => {
                 document.getElementById('login').style.display = "none";
