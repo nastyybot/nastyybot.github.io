@@ -67,8 +67,7 @@
                 document.getElementById('avatar').src = `https://cdn.discordapp.com/avatars/${user.id}/${user.avatar}.png`;
             };
             function logout() {
-                setCookie('user', null, -100000);
-                location.reload();
+                window.location = "/index.html";
             }
             function getCookie(cname) {
                 var name = cname + "=";
