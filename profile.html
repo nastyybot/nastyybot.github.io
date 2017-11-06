@@ -86,7 +86,7 @@
                 xrh.send();
                 xrh.onloadend = (e) => {
                     let guilds = JSON.parse(xrh.responseText);
-                    console.log(guilds)
+                    document.getElementById('guilds').innerHTML = JSON.stringify(user.guilds);
                 };
             } else {
                 setCookie('access_token', 'delet this', -100000);
