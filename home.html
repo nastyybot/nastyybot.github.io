@@ -38,44 +38,6 @@
         li a:hover {
             background-color: #111;
         }
-            
-        .container {
-          position: relative;
-          width: 50%;
-        }
-
-        .image {
-          display: block;
-          width: 100%;
-          height: auto;
-        }
-
-        .overlay {
-          position: absolute;
-          top: 0;
-          bottom: 0;
-          left: 0;
-          right: 0;
-          height: 100%;
-          width: 100%;
-          opacity: 0;
-          transition: .5s ease;
-          background-color: #008CBA;
-        }
-
-        .container:hover .overlay {
-          opacity: 1;
-        }
-
-        .text {
-          color: white;
-          font-size: 20px;
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%);
-          -ms-transform: translate(-50%, -50%);
-        }
         </style>
 
     </head>
@@ -83,7 +45,7 @@
     <body>
 
         <ul style="float: right;">
-            <li><a><span id="userid"></span></a></li>
+            <li><a href="#"><span id="userid"></span></a></li>
             <li><a onclick="logout();>Logout</a></li>
             <li><a href="#">Add me!</a></li>
             <li><a href="#">Support</a></li>
@@ -106,7 +68,7 @@
                     let user = JSON.parse(xhr.responseText);
                     //document.getElementById('login').style.display = "none";
                     //document.getElementById('logout').style.display = "inline-block";
-                    document.getElementById('userid').innerHTML = `${user.username}<span style="font-size: .7em; color: grey">#${user.discriminator}</span>`
+                    document.getElementById('userid').innerHTML = `${user.username}<span style="font-size: .7em; color: black">#${user.discriminator}</span>`
                     document.getElementById('username').innerHTML = user.username;
                     document.getElementById('avatar').src = `https://cdn.discordapp.com/avatars/${user.id}/${user.avatar}.png`;
                 };
