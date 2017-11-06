@@ -38,17 +38,43 @@
         li a:hover {
             background-color: #111;
         }
-        
-        button {
-            float: right;
-            cursor: pointer;
+            
+        .container {
+          position: relative;
+          width: 50%;
         }
-        .nav{
-            display: block;
-            color: white;
-            text-align: center;
-            padding: 14px 16px;
-            text-decoration: none;  
+
+        .image {
+          display: block;
+          width: 100%;
+          height: auto;
+        }
+
+        .overlay {
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          height: 100%;
+          width: 100%;
+          opacity: 0;
+          transition: .5s ease;
+          background-color: #008CBA;
+        }
+
+        .container:hover .overlay {
+          opacity: 1;
+        }
+
+        .text {
+          color: white;
+          font-size: 20px;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          -ms-transform: translate(-50%, -50%);
         }
         </style>
 
@@ -57,12 +83,8 @@
     <body>
 
         <ul style="float: right;">
-            <div class="dropdown">
-                <button onclick="dropDown()" class="nav"><span id="username"></span></button>
-                <div id="dDropdown" class="dropdown-content">
-                    <li><a onclick="logout();>Logout</a></li>
-            </div></div>
-            </li>
+            <li onclick="dropDown()" class="nav"><span id="userid"></span></li>
+            <li><a onclick="logout();>Logout</a></li>
             <li><a href="#">Add me!</a></li>
             <li><a href="#">Support</a></li>
             <li><a href="https://www.patreon.com/nastydiscordbot">Donate</a></li>
@@ -72,7 +94,14 @@
         <div style="float: left;">
             <img id="avatar">
         </div>
-        
+                
+        <div class="container">
+          <img id="avatar">
+          <div class="overlay">
+            <div class="text"><span id="username"></span></div>
+          </div>
+        </div>
+                
         <script>
             if (getCookie('access_token')) {
                 let xhr = new XMLHttpRequest()
@@ -83,7 +112,7 @@
                     let user = JSON.parse(xhr.responseText);
                     //document.getElementById('login').style.display = "none";
                     //document.getElementById('logout').style.display = "inline-block";
-                    //document.getElementById('userid').innerHTML = `${user.username}<span style="font-size: .7em; color: grey">#${user.discriminator}</span>`
+                    document.getElementById('userid').innerHTML = `${user.username}<span style="font-size: .7em; color: grey">#${user.discriminator}</span>`
                     document.getElementById('username').innerHTML = user.username;
                     document.getElementById('avatar').src = `https://cdn.discordapp.com/avatars/${user.id}/${user.avatar}.png`;
                 };
@@ -114,24 +143,6 @@
                 d.setTime(d.getTime() + exms);
                 var expires = "expires="+ d.toUTCString();
                 document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
-            }
-            function dropDown() {
-                document.getElementById("dDropdown").classList.toggle("show");
-            }
-
-            // Close the dropdown if the user clicks outside of it
-            window.onclick = function(event) {
-              if (!event.target.matches('.dropbtn')) {
-
-                var dropdowns = document.getElementsByClassName("dropdown-content");
-                var i;
-                for (i = 0; i < dropdowns.length; i++) {
-                  var openDropdown = dropdowns[i];
-                  if (openDropdown.classList.contains('show')) {
-                    openDropdown.classList.remove('show');
-                  }
-                }
-              }
             }
         </script>
     </body>
