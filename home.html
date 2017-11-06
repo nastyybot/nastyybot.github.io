@@ -38,14 +38,20 @@
         li a:hover {
             background-color: #111;
         }
+            
         .accordion {
             cursor: pointer;
-            padding: 18px;
+            //padding: 18px;
             border: none;
             outline: none;
             font-size: 15px;
             transition: 0.4s;
         }
+        div.panel {
+            padding: 0 18px;
+            overflow: hidden;
+            transition: max-height 0.2s ease-out;
+        }    
         </style>
 
     </head>
@@ -53,8 +59,10 @@
     <body>
 
         <ul style="float: right;">
-            <li class="accordion"><a><span id="username"></span></a>
+            <li class="accordion"><button><span id="username"></span></button></li>
+            <div class="panel">
                 <li><a onclick="logout();>Logout</a></li>
+            </div>
             </li>
             <li><a href="#">Add me!</a></li>
             <li><a href="#">Support</a></li>
