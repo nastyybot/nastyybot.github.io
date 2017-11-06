@@ -80,12 +80,12 @@
                     //document.getElementById('username').innerHTML = user.username;
                     document.getElementById('avatar').src = `https://cdn.discordapp.com/avatars/${user.id}/${user.avatar}.png`;
               };
-                let xhr = new XMLHttpRequest()
-                xhr.open('GET', 'https://discordapp.com/api/v6/users/@me/guilds', true);
-                xhr.setRequestHeader('Authorization', getCookie('token_type') + " " + getCookie('access_token'));
-                xhr.send();
-                xhr.onloadend = (e) => {
-                    let guilds = JSON.parse(xhr.responseText);
+                let xrh = new XMLHttpRequest()
+                xrh.open('GET', 'https://discordapp.com/api/v6/users/@me/guilds', true);
+                xrh.setRequestHeader('Authorization', getCookie('token_type') + " " + getCookie('access_token'));
+                xrh.send();
+                xrh.onloadend = (e) => {
+                    let guilds = JSON.parse(xrh.responseText);
                     console.log(guilds)
                 };
             } else {
