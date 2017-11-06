@@ -38,20 +38,13 @@
         li a:hover {
             background-color: #111;
         }
-            
-        .accordion {
-            cursor: pointer;
-            padding: 18px;
-            border: none;
-            outline: none;
-            font-size: 15px;
-            transition: 0.4s;
+        button.nav{
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;  
         }
-        div.panel {
-            padding: 0 18px;
-            overflow: hidden;
-            transition: max-height 0.2s ease-out;
-        }    
         </style>
 
     </head>
@@ -59,10 +52,11 @@
     <body>
 
         <ul style="float: right;">
-            <li class="accordion"><a><span id="username"></span></a></li>
-            <div class="panel">
-                <li><a onclick="logout();>Logout</a></li>
-            </div>
+            <div class="dropdown">
+                <button onclick="dropDown()" class="nav"><span id="username"></span></button>
+                <div id="dDropdown" class="dropdown-content">
+                    <li><a onclick="logout();>Logout</a></li>
+            </div></div>
             </li>
             <li><a href="#">Add me!</a></li>
             <li><a href="#">Support</a></li>
@@ -116,18 +110,22 @@
                 var expires = "expires="+ d.toUTCString();
                 document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
             }
-            var acc = document.getElementsByClassName("accordion");
-            var i;
+            function dropDown() {
+                document.getElementById("dDropdown").classList.toggle("show");
+            }
 
-            for (i = 0; i < acc.length; i++) {
-              acc[i].onclick = function() {
-                this.classList.toggle("active");
-                var panel = this.nextElementSibling;
-                if (panel.style.maxHeight){
-                  panel.style.maxHeight = null;
-                } else {
-                  panel.style.maxHeight = panel.scrollHeight + "px";
-                } 
+            // Close the dropdown if the user clicks outside of it
+            window.onclick = function(event) {
+              if (!event.target.matches('.dropbtn')) {
+
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                  var openDropdown = dropdowns[i];
+                  if (openDropdown.classList.contains('show')) {
+                    openDropdown.classList.remove('show');
+                  }
+                }
               }
             }
         </script>
