@@ -85,7 +85,7 @@
                 xrh.setRequestHeader('Authorization', getCookie('token_type') + " " + getCookie('access_token'));
                 xrh.send();
                 xrh.onloadend = (e) => {
-                    let guilds = JSON.parse(xrh.responseText);
+                    let guilds = JSON.stringify(guild) to guild.map(x => x.name)
                     document.getElementById('guilds').innerHTML = JSON.stringify(guilds);
                 };
             } else {
