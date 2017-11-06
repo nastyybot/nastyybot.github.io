@@ -79,7 +79,7 @@
                     document.getElementById('id').innerHTML = user.id;
                     //document.getElementById('username').innerHTML = user.username;
                     document.getElementById('avatar').src = `https://cdn.discordapp.com/avatars/${user.id}/${user.avatar}.png`;
-                
+              };
                 let xhr = new XMLHttpRequest()
                 xhr.open('GET', 'https://discordapp.com/api/v6/users/@me/guilds', true);
                 xhr.setRequestHeader('Authorization', getCookie('token_type') + " " + getCookie('access_token'));
@@ -88,7 +88,6 @@
                     let guilds = JSON.parse(xhr.responseText);
                     console.log(guilds)
                 };
-              };
             } else {
                 setCookie('access_token', 'delet this', -100000);
                 setTimeout(logout, 100);
