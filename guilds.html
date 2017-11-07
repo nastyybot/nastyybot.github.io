@@ -79,7 +79,8 @@
                 xrh.send();
                 xrh.onloadend = (e) => {
                     let guilds = JSON.parse(xrh.responseText);
-                    document.getElementById('guilds').innerHTML = guilds.map(x => x.name);
+                    document.getElementById('guilds').innerHTML = guilds.map(x => x.name).join("\n");
+                    document.getElementById('guildAvatar').src = `https://cdn.discordapp.com/avatars/${guilds[/*guildid*/].id}/${guilds[/*guildid*/].icon}.png;`
                 };
             } else {
                 setCookie('access_token', 'delet this', -100000);
