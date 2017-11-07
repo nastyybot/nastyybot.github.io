@@ -51,8 +51,8 @@
         
         <img id="avatar">
         
-        <h1><span id="userid"></span>'s Guilds</h1>
-        <p>Your ID: <span id="id"></span></p>
+        <h1>&nbsp;<span id="userid"></span>'s Guilds</h1>
+        <p>&nbsp;Your ID: <span id="id"></span></p>
         <br /><br />
         <p>Guilds: </p>
         <br />
@@ -83,7 +83,7 @@
                     //document.getElementById('guilds').innerHTML = guilds.map(x => x.name).join("\n");
                     for (guild of guilds) {
                     let guilditem = document.createElement('span');
-                    guilditem.innerHTML = `<a href="https://cdn.discordapp.com/icons/${guild.id}/${guild.icon}.png"><img src="https://cdn.discordapp.com/icons/${guild.id}/${guild.icon}.png"></a> | ${guild.name} <br />`;
+                    guilditem.innerHTML = `<a href="https://cdn.discordapp.com/icons/${guild.id}/${guild.icon}.png"><img src="https://cdn.discordapp.com/icons/${guild.id}/${guild.icon}.png"></a> | ${guild.name} &nbsp;`;
                     document.getElementById('list').appendChild(guilditem);
                 }
                 };
