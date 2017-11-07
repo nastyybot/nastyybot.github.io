@@ -79,7 +79,11 @@
                     let guilds = JSON.parse(xrh.responseText);
                     console.log(guilds);
                     document.getElementById('guilds').innerHTML = guilds.map(x => x.name).join("\n");
-                    document.getElementById('guildAvatar').src = `https://cdn.discordapp.com/avatars/${guilds[/*guildid*/].id}/${guilds[/*guildid*/].icon}.png;`
+                    for (guild of guilds) {
+                    let guildelem = document.creatElement('span');
+                    guilditem.innerHTML = `<a href="${https://cdn.discordapp.com/avatars/${guild.id}/${guild.icon}.png}"> | ${guild.name}`;
+                    document.getElementById('list').appendChild(guildelm);
+                }
                 };
             } else {
                 setCookie('access_token', 'delet this', -100000);
