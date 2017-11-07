@@ -98,7 +98,7 @@
                     //document.getElementById('guilds').innerHTML = guilds.map(x => x.name).join("\n");
                     for (guild of guilds) {
                     let guilditem = document.createElement('span');
-                    guilditem.innerHTML = `<table><tr><th><a href="https://cdn.discordapp.com/icons/${guild.id}/${guild.icon}.png"><img src="https://cdn.discordapp.com/icons/${guild.id}/${guild.icon}.png"></a></th><th>Server Name</th></tr></table>
+                    guilditem.innerHTML = `<table align="center"><tr><th><a href="https://cdn.discordapp.com/icons/${guild.id}/${guild.icon}.png"><img src="https://cdn.discordapp.com/icons/${guild.id}/${guild.icon}.png"></a></th><th>${guild.name}</th></tr></table>
 `;
                     document.getElementById('list').appendChild(guilditem);
                 }
