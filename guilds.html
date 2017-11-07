@@ -30,6 +30,7 @@
             text-align: center;
             padding: 14px 16px;
             text-decoration: none;
+            cursor: pointer;
         }
         li a:hover {
             background-color: #111;
@@ -48,9 +49,13 @@
             <li><a onclick="logout();">Logout</a></li>
         </ul>
         
-            <h1><span id="userid"></span>'s Guilds</h1>
-            <p>Your ID: <span id="id"></span></p>
-            <p>Guilds: <span id="guilds"></span></p>
+        <div style="float: left;">
+            <img id="avatar">
+        </div>
+        
+        <h1><span id="userid"></span>'s Guilds</h1>
+        <p>Your ID: <span id="id"></span></p>
+        <p>Guilds: <span id="guilds"></span></p>
 
         <script>
             if (getCookie('access_token')) {
