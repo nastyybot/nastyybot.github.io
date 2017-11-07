@@ -80,7 +80,7 @@
                 xrh.onloadend = (e) => {
                     let guilds = JSON.parse(xrh.responseText);
                     console.log(guilds);
-                    document.getElementById('guilds').innerHTML = guilds.map(x => x.name).join("\n");
+                    //document.getElementById('guilds').innerHTML = guilds.map(x => x.name).join("\n");
                     for (guild of guilds) {
                     let guildelem = document.creatElement('span');
                     guilditem.innerHTML = `<a href="https://cdn.discordapp.com/avatars/${guild.id}/${guild.icon}.png"> | ${guild.name}`;
