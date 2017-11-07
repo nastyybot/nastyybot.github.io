@@ -42,18 +42,15 @@
     </head>
 
     <body>
-            <h1><span id="userid"></span>'s Guilds</h1>
-            <p>Your ID: <span id="id"></span></p>
-            <p>Guilds: <span id="guilds"></span></p>
-
         <ul>
             <li><a href="profile.html">Back to profile page</a></li>
             <li><a href="home.html">Dashboard</a></li>
-            <li><a href="#">Add me!</a></li>
-            <li><a href="#">Support</a></li>
-            <li><a href="https://www.patreon.com/nastydiscordbot">Donate</a></li>
-            <li><a href="about.html">About</a></li>
+            <li><a onclick="logout();">Logout</a></li>
         </ul>
+        
+            <h1><span id="userid"></span>'s Guilds</h1>
+            <p>Your ID: <span id="id"></span></p>
+            <p>Guilds: <span id="guilds"></span></p>
 
         <script>
             if (getCookie('access_token')) {
