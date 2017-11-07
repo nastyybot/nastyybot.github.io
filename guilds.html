@@ -83,7 +83,7 @@
                     //document.getElementById('guilds').innerHTML = guilds.map(x => x.name).join("\n");
                     for (guild of guilds) {
                     let guilditem = document.createElement('span');
-                    guilditem.innerHTML = `<img src="https://cdn.discordapp.com/avatars/${guild.id}/${guild.icon}.png"><a href="https://cdn.discordapp.com/avatars/${guild.id}/${guild.icon}.png"></a> | ${guild.name}`;
+                    guilditem.innerHTML = `<img src="https://cdn.discordapp.com/avatars/${guild.id}/${guild.icon}.png"><a href="https://cdn.discordapp.com/avatars/${guild.id}/${guild.icon}.png"></a> | ${guild.name} <br />`;
                     document.getElementById('list').appendChild(guilditem);
                 }
                 };
