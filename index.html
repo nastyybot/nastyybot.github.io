@@ -1,84 +1,87 @@
+<!DOCTYPE html>
 <html>
-    <head>
-        <title>N A S T Y</title>
-        <link rel="stylesheet" href="main.css">
-        <link rel="shortcut icon" type="image/x-icon" href="logo.png" />
 
-        <!-- JavaScript -->
-    	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/1.1.4/typed.min.js"></script>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NASTY - DISCORD BOT</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
+    <link rel="stylesheet" href="assets/css/Features-Boxed.css">
+    <link rel="stylesheet" href="assets/css/Footer-Basic.css">
+    <link rel="stylesheet" href="assets/css/Highlight-Blue.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="assets/css/Navigation-Clean.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
 
-        <link href="https://fonts.googleapis.com/css?family=Nova+Flat" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow" rel="stylesheet">
-
-        <!-- CSS -->
-        <style>
-        ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-            background-color: #7289DA;
-        }
-
-        li {
-            float: right;
-        }
-
-        li a {
-            display: block;
-            color: white;
-            text-align: center;
-            padding: 14px 16px;
-            text-decoration: none;
-        }
-
-        li a:hover {
-            background-color: #111;
-        }
-        a {
-            text-decoration: none;
-        }
-        img {
-            border-radius: 50%;
-        }
-        </style>
-
-    </head>
-
-    <body>
-        <div id="typed-strings">
-            <p>Moderation</p>
-            <p>Music</p>
-            <p>Fun</p>
-            <p>Custom (soon)</p>
+<body>
+    <div>
+        <nav class="navbar navbar-light navbar-expand-md navigation-clean">
+            <div class="container"><a class="navbar-brand" href="#" style="color:white;font-size:30px;">NASTY BOT</a><button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+                <div
+                    class="collapse navbar-collapse" id="navcol-1">
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item" role="presentation"><a class="nav-link active" href="index.html" data-bs-hover-animate="flash" style="color:white;">Commands </a></li>
+                        <li class="nav-item" role="presentation"><a class="nav-link" href="#" data-bs-hover-animate="flash" style="color:white;">Updates &amp; Releases</a></li>
+                        <li class="nav-item" role="presentation"><a class="nav-link" href="#" data-bs-hover-animate="flash" style="color:white;">Donate </a></li>
+                        <li class="dropdown"><a class="dropdown-toggle nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false" href="#" style="color:white;">Dropdown </a>
+                            <div class="dropdown-menu" role="menu"><a class="dropdown-item" role="presentation" href="#">First Item</a><a class="dropdown-item" role="presentation" href="#">Second Item</a><a class="dropdown-item" role="presentation" href="#">Third Item</a></div>
+                        </li>
+                        <li class="nav-item" role="presentation"><a class="nav-link" href="login.html" data-bs-hover-animate="flash" style="color:white;">Login </a></li>
+                    </ul>
+            </div>
+    </div>
+    </nav>
+    </div>
+    <div class="highlight-blue" style="height:390px;padding:14px;"><img class="rounded-circle" src="assets/img/Nasty Logo.png" style="width:207px;margin:auto;display:block;padding:30px;height:205px;margin-top:-50px;">
+        <h1 style="font-family:'Open Sans', sans-serif;/*margin:auto;*//*display:block;*/text-align:center;"><strong>NASTY BOT</strong></h1>
+        <header></header>
+        <div class="container">
+            <div class="intro">
+                <header></header>
+                <p class="text-center" style="font-family:'Open Sans', sans-serif;color:white;font-size:18px;">A Multipurpose Discord Bot, created for Discord servers. Includes modules like Fun, Music &amp; Moderator.</p>
+            </div>
+            <div class="buttons"><a class="btn btn-primary btn-block" role="button" target="_blank" data-bs-hover-animate="bounce" style="margin:140px;width:216px;padding:14px;margin:auto;background-color:#3494E6;border-color:#EC6EAD;font-family:'Open Sans', sans-serif;" href="http://bit.ly/nasty_bot">INVITE to discord</a></div>
         </div>
-            
-        <div class="content">
-            <img src="logo-bot-blue.png" alt="Logo" style="width:200px; height: 200px;"/>
-            <h1 class="nasty">N A S T Y</h1>
-            <h2 class="modules">A Discord Bot for <b class="font"><span id="typed"></span></b></h2>
-            <a href="https://discordapp.com/oauth2/authorize?response_type=token&client_id=295292566855876611&scope=identify+guilds&redirect_uri=https://nastyybot.github.io/login.html" class="button">Connect to Discord</a>
+    </div>
+    <div class="features-boxed" style="background-color:#23272A;">
+        <div class="container">
+            <div class="intro">
+                <h2 class="text-center" style="font-family:'Open Sans', sans-serif;color:white;">WHY NASTY?</h2>
+                <p class="text-center" style="color:white;">Listen up folks, things are about to become intense. But no really, take a look at why you should consider using NASTY Bot.</p>
+            </div>
+            <div class="row justify-content-center features">
+                <div class="col-sm-6 col-md-5 col-lg-4 item">
+                    <div data-bs-hover-animate="bounce" class="box" style="background-color:#4a4a4a;"><i class="fa fa-music icon"></i>
+                        <h3 class="name" style="color:white;font-family:'Open Sans', sans-serif;font-size:20px;">Works everywhere</h3>
+                        <p class="description" style="color:#3494E6;font-family:'Open Sans', sans-serif;">Balhablah this bot is the best of the best </p>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-5 col-lg-4 item">
+                    <div data-bs-hover-animate="bounce" class="box" style="background-color:#4a4a4a;"><i class="fa fa-clock-o icon"></i>
+                        <h3 class="name" style="font-family:'Open Sans', sans-serif;font-size:20px;color:white;">Always available</h3>
+                        <p class="description" style="color:#3494E6;">Balhablah i love this bot </p>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-5 col-lg-4 item">
+                    <div data-bs-hover-animate="bounce" class="box" style="background-color:#4a4a4a;"><i class="fa fa-list-alt icon"></i>
+                        <h3 class="name" style="color:white;font-family:'Open Sans', sans-serif;font-size:20px;">Customizable </h3>
+                        <p class="description" style="color:#3494E6;">Balhablah fancy desc</p>
+                    </div>
+                </div>
+            </div>
         </div>
+    </div>
+    <div class="footer-basic" style="background-color:#3494E6;">
+        <footer>
+            <p class="copyright" style="color:white;font-size:15px;">NASTY Bot © 2018 - Website Designed by AU Designs | Made by ItsJustNasty&Toni</p>
+        </footer>
+    </div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/bs-animation.js"></script>
+</body>
 
-        <ul>
-            <li><a href="https://discordapp.com/oauth2/authorize?response_type=token&client_id=295292566855876611&scope=identify+guilds&redirect_uri=https://nastyybot.github.io/login.html">Login</a></li>
-            <li><a href="#">Add me!</a></li>
-            <li><a href="#">Support</a></li>
-            <li><a href="https://www.patreon.com/nastydiscordbot">Donate</a></li>
-        </ul>
-
-        <script>
-                $(function(){
-                    $("#typed").typed({
-                        stringsElement: $('#typed-strings'),
-                        startDelay: 500,
-                        backDelay: 2000,
-                        contentType: 'text',
-                        loop: true
-                    });
-                });
-            </script>
-    </body>
 </html>
