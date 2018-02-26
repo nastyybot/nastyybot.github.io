@@ -9,6 +9,27 @@
     <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-" crossorigin="anonymous">
 
     <link rel="stylesheet" href="assets/css/layouts/side-menu.css">
+    <style>
+        table, tr, td, th
+    {
+        border: 1px solid black;
+        border-collapse:collapse;
+    }
+
+    th, td {
+        padding: 5px;
+        text-align: left;    
+    }
+    img.button_open{
+      content:url('http://code.stephenmorley.org/javascript/collapsible-lists/button-open.png');
+      cursor:pointer;
+    }
+
+    img.button_closed{
+      content: url('http://code.stephenmorley.org/javascript/collapsible-lists/button-closed.png');
+      cursor:pointer;
+    }
+    </style>
 </head>
 <body>
 
@@ -82,31 +103,137 @@
             
             <h1 class="content-subhead" style="text-align:center;"><a id="Moderation">Moderation Module</a></h1>
             <p>
-                Insert table here. Command Name | Usage | Desc [3 rows]
+                Insert table here. Command Name | Perms [3 rows]
+                
+                <table border="0">
+                  <tr>
+                      <th>Command Name</th>
+                      <th>Permission(s)</th>
+                  </tr>
+                    <!-- Copy and Paste this till ... -->
+                  <tr>
+                    <td class='group1'>//ban</td>
+                    <td>BAN_MEMBERS</td>
+                  </tr>
+                  <tr class='group1'>
+                    <td colspan="2">Ban other users!</td>
+                  </tr>
+                    <!-- ...till this -->
+                </table>
+            
             </p>
             
           <h1 class="content-subhead" style="text-align:center;"><a id="Misc">Misc/Fun Module</a></h1>
           <p>
-                Insert table here. Command Name | Usage | Desc [3 rows]
+                Insert table here. Command Name | Perms [3 rows]
+                <table border="0">
+                  <tr>
+                      <th>Command Name</th>
+                      <th>Permission(s)</th>
+                  </tr>
+                  <!-- Copy and Paste this till ... -->
+                  <tr>
+                    <td class='group1'>//dice</td>
+                    <td>NONE</td>
+                  </tr>
+                  <tr class='group1'>
+                    <td colspan="2">Rolls the dice! [6 digits]</td>
+                  </tr>
+                  <!-- ...till this -->
+                </table>
             </p>
             
           <h1 class="content-subhead" style="text-align:center;"><a id="Music">Music Module</a></h1>
             <p>
-                Insert table here. Command Name | Usage | Desc [3 rows]
+                Insert table here. Command Name | Perms [3 rows]
+                
+                IN DEVELOPMENT
             </p>
             
           <h1 class="content-subhead" style="text-align:center;"><a id="Custom">Custom Module</a></h1>
             <p>
-                Insert table here. Command Name | Usage | Desc [3 rows]
+                Insert table here. Command Name | Perms [3 rows]
+                 <table border="0">
+                  <tr>
+                      <th>Command Name</th>
+                      <th>Permission(s)</th>
+                  </tr>
+                  <!-- Copy and Paste this till ... -->
+                  <tr>
+                    <td class='group1'>//setprefix</td>
+                    <td>MANAGE_GUILDS</td>
+                  </tr>
+                  <tr class='group1'>
+                    <td colspan="2">Set your own custom prefix for your own server!</td>
+                  </tr>
+                  <!-- ...till this -->
+                </table>
             </p>
         </div>
     </div>
 </div>
 
-
-
-
 <script src="assets/js/ui.js"></script>
+<script>
 
+        function CreateGroup(group_name)
+    {
+        // Create Button(Image)
+        $('td.' + group_name).prepend("<img class='" + group_name + " button_closed'> ");
+        // Add Padding to Data
+        $('tr.' + group_name).each(function () {
+            var first_td = $(this).children('td').first();
+            var padding_left = parseInt($(first_td).css('padding-left'));
+            $(first_td).css('padding-left', String(padding_left + 25) + 'px');
+        });
+        RestoreGroup(group_name);
+
+        // Tie toggle function to the button
+        $('img.' + group_name).click(function(){
+            ToggleGroup(group_name);
+        });
+    }
+
+    function ToggleGroup(group_name)
+    {
+        ToggleButton($('img.' + group_name));
+        RestoreGroup(group_name);
+    }
+
+    function RestoreGroup(group_name)
+    {
+        if ($('img.' + group_name).hasClass('button_open'))
+        {
+            // Open everything
+            $('tr.' + group_name).show();
+
+            // Close subgroups that been closed
+            $('tr.' + group_name).find('img.button_closed').each(function () {
+                sub_group_name = $(this).attr('class').split(/\s+/)[0];
+                //console.log(sub_group_name);
+                RestoreGroup(sub_group_name);
+            });
+        }
+
+        if ($('img.' + group_name).hasClass('button_closed'))
+        {
+            // Close everything
+            $('tr.' + group_name).hide();
+        }
+    }
+
+    function ToggleButton(button)
+    {
+        $(button).toggleClass('button_open');
+        $(button).toggleClass('button_closed');
+    }
+
+    CreateGroup('group1');
+    CreateGroup('group2');
+    CreateGroup('sub_group1');
+    CreateGroup('sub_group2');
+    CreateGroup('sub_sub_group1');
+
+  </script>
 </body>
 </html>
