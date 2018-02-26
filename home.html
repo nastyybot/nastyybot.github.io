@@ -1,3 +1,103 @@
 <html>
-    <!-- In Progress -->
+    <head>
+        <title>N A S T Y | Dashboard</title>
+        <link rel="stylesheet" href="main.css">
+        <link rel="shortcut icon" type="image/x-icon" href="logo.png" />
+
+        <!-- JavaScript -->
+    	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/1.1.4/typed.min.js"></script>
+
+        <link href="https://fonts.googleapis.com/css?family=Nova+Flat" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow" rel="stylesheet">
+
+        <!-- CSS -->
+        <style>
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #7289DA;
+        }
+        li {
+            float: right;
+            cursor: pointer;
+        }
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        li a:hover {
+            background-color: #111;
+        }
+        </style>
+
+    </head>
+
+    <body>
+
+        <ul style="float: right;">
+            <li><a href=""><span id="userid"></span></a></li>
+            <li><a onclick="logout();">Logout</a></li>
+            <li><a href="#">Add me!</a></li>
+            <li><a href="#">Support</a></li>
+            <li><a href="https://www.patreon.com/nastydiscordbot">Donate</a></li>
+            <li><a href="">About</a></li>
+        </ul>
+        
+        <div style="float: left;">
+            <img id="avatar">
+        </div>
+                
+                
+        <script>
+            if (getCookie('access_token')) {
+                let xhr = new XMLHttpRequest()
+                xhr.open('GET', 'https://discordapp.com/api/v6/users/@me', true);
+                xhr.setRequestHeader('Authorization', getCookie('token_type') + " " + getCookie('access_token'));
+                xhr.send();
+                xhr.onloadend = (e) => {
+                    let user = JSON.parse(xhr.responseText);
+                    //document.getElementById('login').style.display = "none";
+                    //document.getElementById('logout').style.display = "inline-block";
+                    document.getElementById('userid').innerHTML = `${user.username}<span style="font-size: .7em; color: black">#${user.discriminator}</span>`
+                    //document.getElementById('username').innerHTML = user.username;
+                    document.getElementById('avatar').src = `https://cdn.discordapp.com/avatars/${user.id}/${user.avatar}.png`;
+                };
+            } else {
+                setCookie('access_token', 'delet this', -100000);
+                setTimeout(logout, 100);
+            }
+            function logout() {
+                window.location = "/index.html";
+            }
+            function getCookie(cname) {
+                var name = cname + "=";
+                var decodedCookie = decodeURIComponent(document.cookie);
+                var ca = decodedCookie.split(';');
+                for(var i = 0; i <ca.length; i++) {
+                    var c = ca[i];
+                    while (c.charAt(0) == ' ') {
+                        c = c.substring(1);
+                    }
+                    if (c.indexOf(name) == 0) {
+                        return c.substring(name.length, c.length);
+                    }
+                }
+                return null;
+            }
+            function setCookie(cname, cvalue, exms) {
+                var d = new Date();
+                d.setTime(d.getTime() + exms);
+                var expires = "expires="+ d.toUTCString();
+                document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+            }
+        </script>
+    </body>
 </html>
