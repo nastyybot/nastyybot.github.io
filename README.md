@@ -1,16 +1,15 @@
 Made by ItsJustNasty & Toni, with the help of Pure.css and AU Designs
 
 
-Pure CSS Layout Examples
 ========================
 
-Layout examples using [Pure CSS][pure] compiled from the [pure-site][] project.
+Command.html is made by using [Pure CSS][pure] compiled from the [pure-site][] project.
 
 [pure]: http://purecss.io/
 [pure-site]: https://github.com/pure-css/pure-site
 
 
-License
+License (pure.css)
 -------
 
 This software is free to use under the zLib license.
