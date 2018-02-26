@@ -1,3 +1,6 @@
+Made by ItsJustNasty & Toni, with the help of Pure.css and AU Designs
+
+
 Pure CSS Layout Examples
 ========================
 
