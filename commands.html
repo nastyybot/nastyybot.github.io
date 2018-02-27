@@ -34,67 +34,13 @@
 </head>
 <body>
     
-<script src="jquery-3.3.1.min.js">
+<script>
+    $(".clickable").click(function() {
 
-    function CreateGroup(group_name)
-    {
-        // Create Button(Image)
-        $('td.' + group_name).prepend("<img class='" + group_name + " button_closed'> ");
-        // Add Padding to Data
-        $('tr.' + group_name).each(function () {
-            var first_td = $(this).children('td').first();
-            var padding_left = parseInt($(first_td).css('padding-left'));
-            $(first_td).css('padding-left', String(padding_left + 25) + 'px');
-        });
-        RestoreGroup(group_name);
-
-        // Tie toggle function to the button
-        $('img.' + group_name).click(function(){
-            ToggleGroup(group_name);
-        });
-    }
-
-    function ToggleGroup(group_name)
-    {
-        ToggleButton($('img.' + group_name));
-        RestoreGroup(group_name);
-    }
-
-    function RestoreGroup(group_name)
-    {
-        if ($('img.' + group_name).hasClass('button_open'))
-        {
-            // Open everything
-            $('tr.' + group_name).show();
-
-            // Close subgroups that been closed
-            $('tr.' + group_name).find('img.button_closed').each(function () {
-                sub_group_name = $(this).attr('class').split(/\s+/)[0];
-                //console.log(sub_group_name);
-                RestoreGroup(sub_group_name);
-            });
-        }
-
-        if ($('img.' + group_name).hasClass('button_closed'))
-        {
-            // Close everything
-            $('tr.' + group_name).hide();
-        }
-    }
-
-    function ToggleButton(button)
-    {
-        $(button).toggleClass('button_open');
-        $(button).toggleClass('button_closed');
-    }
-
-    CreateGroup('group1');
-    CreateGroup('group2');
-    CreateGroup('sub_group1');
-    CreateGroup('sub_group2');
-    CreateGroup('sub_sub_group1');
-
-  </script>
+    $(this).next().toggle();
+    
+    });
+</script>
     
     
     
@@ -147,10 +93,10 @@
                   </tr>
                     <!-- Copy and Paste this till ... -->
                   <tr>
-                    <td class='group1' width="85%">//ban</td>
+                    <td class='clickable' width="85%">//ban</td>
                     <td>BAN_MEMBERS</td>
                   </tr>
-                  <tr class='group1'>
+                  <tr class='clickable'>
                     <td colspan="2">Ban other users!</td>
                   </tr>
                     <!-- ...till this -->
@@ -187,15 +133,13 @@
                       <th>Command Name</th>
                       <th>Permission(s)</th>
                   </tr>
-                    <!-- Copy and Paste this till ... -->
-                  <tr>
-                    <td class='group1' width="85%">//ban</td>
+                  <tr class='clickable'>
+                    <td width="85%">//ban</td>
                     <td>BAN_MEMBERS</td>
                   </tr>
-                  <tr class='group1'>
+                  <tr>
                     <td colspan="2">Ban other users!</td>
                   </tr>
-                    <!-- ...till this -->
                 </table>
             
             </p>
@@ -207,15 +151,13 @@
                       <th>Command Name</th>
                       <th>Permission(s)</th>
                   </tr>
-                  <!-- Copy and Paste this till ... -->
-                  <tr>
-                    <td class='group1' width="85%">//dice</td>
+                  <tr class='clickable'>
+                    <td width="85%">//dice</td>
                     <td>NONE</td>
                   </tr>
-                  <tr class='group1'>
+                  <tr>
                     <td colspan="2">Rolls the dice! [6 digits]</td>
                   </tr>
-                  <!-- ...till this -->
                 </table>
             </p>
             
@@ -231,15 +173,13 @@
                       <th>Command Name</th>
                       <th>Permission(s)</th>
                   </tr>
-                  <!-- Copy and Paste this till ... -->
-                  <tr>
-                    <td class='group1' width="85%">//setprefix</td>
+                  <tr class='clickable'>
+                    <td width="85%">//setprefix</td>
                     <td>MANAGE_GUILDS</td>
                   </tr>
-                  <tr class='group1'>
+                  <tr>
                     <td colspan="2">Set your own custom prefix for your own server!</td>
                   </tr>
-                  <!-- ...till this -->
                 </table>
             </p>
           <h1 class="content-subhead" style="text-align:center;"><a id="Custom">Games Module</a></h1>
@@ -249,15 +189,13 @@
                       <th>Command Name</th>
                       <th>Permission(s)</th>
                   </tr>
-                  <!-- Copy and Paste this till ... -->
-                  <tr>
-                    <td class='group1' width="85%">//mc <server_ip></td>
+                  <tr class='clickable'>
+                    <td width="85%">//mc <server_ip></td>
                     <td>MANAGE_GUILDS</td>
                   </tr>
-                  <tr class='group1'>
+                  <tr>
                     <td colspan="2">Get LIVE stats from the server ip that you put such as Online Players, MOTD and others</td>
                   </tr>
-                  <!-- ...till this -->
                 </table>
             </p>
         </div>
