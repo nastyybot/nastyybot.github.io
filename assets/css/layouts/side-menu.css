@@ -98,6 +98,7 @@ appears on the left side of the page.
         color: #999;
         border: none;
         padding: 0.6em 0 0.6em 0.6em;
+        font-size: 20px;
     }
 
     /*
@@ -142,7 +143,7 @@ appears on the left side of the page.
     This styles the menu heading.
     */
     #menu .pure-menu-heading {
-        font-size: 110%;
+        font-size: 150%;
         color: #fff;
         margin: 0;
     }
