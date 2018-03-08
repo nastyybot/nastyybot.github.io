@@ -105,7 +105,7 @@
                     let user = JSON.parse(xhr.responseText);
                     //document.getElementById('login').style.display = "none";
                     //document.getElementById('logout').style.display = "inline-block";
-                    document.getElementById('userid').innerHTML = `${user.username}<span style="font-size: .7em; color: black">#${user.discriminator}</span>`
+                    document.getElementById('userid').innerHTML = `${user.username}<span style="font-size: .7em; color: white">#${user.discriminator}</span>`
                     //document.getElementById('username').innerHTML = user.username;
                     document.getElementById('avatar').src = `https://cdn.discordapp.com/avatars/${user.id}/${user.avatar}.png`;
                 };
