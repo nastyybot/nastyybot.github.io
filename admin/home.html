@@ -77,7 +77,7 @@
                 setTimeout(logout, 100);
             }
             function logout() {
-                setCookie('user', null, -100000);
+                setCookie('access_token', 'delet this', -100000);
                 window.location = "/index.html";
             }
             function getCookie(cname) {
