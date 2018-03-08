@@ -3,7 +3,11 @@ This is the website codes for NASTY bot, not the bot's source code.
 Made by ItsJustNasty & Toni, with the help of Pure.css and AU Designs
 
 
-========================
+
+##========================##
+
+
+
 Credits:
 
 Main Page (index.html):
