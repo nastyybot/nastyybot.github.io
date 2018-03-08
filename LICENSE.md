@@ -1,3 +1,5 @@
+THIS IS FOR PURE.CSS, NOT FOR THE WHOLE WEBSITE. btw, the website's copyrighted. sorry bud
+
 Software License Agreement (BSD License)
 ========================================
 
