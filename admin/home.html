@@ -72,6 +72,7 @@
                 };
             } else {
                 setCookie('access_token', 'delet this', -100000);
+                alert("[ALERT] >> You need to log in inorder to access this page!");
                 setTimeout(logout, 100);
             }
             function logout() {
