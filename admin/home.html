@@ -77,6 +77,12 @@
                 margin: auto;
                 width: 40%;
             }
+            a:active {
+                color: #7289DA;
+            }
+            a:visited {
+                color: #99AAB5;
+            }
         </style>
 
     </head>
@@ -87,8 +93,8 @@
             <img id="avatar" /><br/>
             <h1>COMING SOON</h1>
             <hr>
-              <p>Join the <a href="">Discord Server</a> for Updates on this site!</p>
-              <p>Sorry, <span id="userid"></span>, this site is under development.</p>
+              <p>Join the <a href="http://bit.ly/nastyserver">Discord Server</a> for updates on this site!</p>
+              <p>Sorry,<span id="userid"></span>, this site is under development.</p>
               <p><a onclick="logout();">Click here to log out</a></p>
           </div>
         </div>
@@ -112,11 +118,13 @@
                 alert("[ALERT] >> You need to log in inorder to access this page!");
                 window.location = "/index.html";
             }
+            
             function logout() {
                 setCookie('access_token', 'delet this', -100000);
                 alert("[NOTICE] >> Logout successful! Redirecting to main page...");
                 window.location = "/index.html";
             }
+            
             function getCookie(cname) {
                 var name = cname + "=";
                 var decodedCookie = decodeURIComponent(document.cookie);
