@@ -37,26 +37,64 @@
             li a:hover {
                 background-color: #111;
             }
+            body, html {
+                height: 100%;
+                margin: 0;
+            }
+
+            .bgimg {
+                background-image: url('https://i.ytimg.com/vi/DF8OGjO7JqA/maxresdefault.jpg');
+                height: 100%;
+                background-position: center;
+                background-size: cover;
+                position: relative;
+                color: white;
+                font-family: "Courier New", Courier, monospace;
+                font-size: 25px;
+            }
+
+            .topleft {
+                position: absolute;
+                top: 0;
+                left: 16px;
+            }
+
+            .bottomleft {
+                position: absolute;
+                bottom: 0;
+                left: 16px;
+            }
+
+            .middle {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                text-align: center;
+            }
+
+            hr {
+                margin: auto;
+                width: 40%;
+            }
         </style>
 
     </head>
 
     <body>
-
-        <ul style="float: right;">
-            <li><a onclick="logout();">Logout</a></li>
-            <li><a href=""><span id="userid"></span></a></li>
-            <li><a href="#">Add me!</a></li>
-            <li><a href="#">Support</a></li>
-            <li><a href="https://www.patreon.com/nastydiscordbot">Donate</a></li>
-            <li><a href="">About</a></li>
-        </ul>
-        
-        <div style="float: left;">
-            <img id="avatar">
+        <div class="topleft">
+          <img id="avatar">
+        </div>        
+        <div class="bgimg">
+          <div class="middle">
+            <h1>COMING SOON</h1>
+            <hr>
+              <p>Join the <a href="">Discord Server</a> for Updates on this site!</p>
+              <p>Sorry, <span id="userid"></span>, this site is under development.</p>
+              <p><a onclick="logout();">Click here to log out</a></p>
+          </div>
         </div>
-                
-                
+        
         <script>
             if (getCookie('access_token')) {
                 let xhr = new XMLHttpRequest()
