@@ -1,0 +1,28 @@
+<?php
+    $has_Cookie_DisplayName = isset($_COOKIE["COOKIE_DisplayName"]);
+    if($has_Cookie_DisplayName == true){
+        $_cookie_DisplayName = $_COOKIE["COOKIE_DisplayName"];
+        echo "Logged in as: <strong>".$_cookie_DisplayName."!</strong> [<a href='logout.php'>LOGOUT</a>]";
+    } else {
+        if(isset($_SESSION) == false) {
+            session_start();
+        }
+        $has_Cookie_DisplayName = isset($_SESSION["SESS_DISPLAYNAME"]);
+        if($has_Cookie_DisplayName == true){
+            $session_DisplayName = $_SESSION['SESS_DISPLAYNAME'];
+            echo "Logged in as: <strong>".$session_DisplayName."!</strong> [<a href='logout.php'>LOGOUT</a>];";
+        } else {
+            echo "You need to log in! [<a href='login.php'>Login</a>]";
+        }
+    }
+?>
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Dashboard Dev</title>
+    </head>
+    
+    <body>
+        
+    </body>
+</html>
