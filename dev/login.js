@@ -4,26 +4,17 @@
     var password = document.getElementById("password").value;
     
     if ( username == "nasty" && password == "admin1"){
-      var d = new Date();
-      d.setTime(d.getTime() + (30*24*60*60*1000));
-      var expires = "expires=" + d.toGMTString();
-      document.cookie = "username=ItsJustNasty" + expires;
+      document.cookie = "username=ItsJustNasty";
       alert ("Login successfully");
       window.location = "dashboard.html"; 
       return false;
     } else if ( username == "pie" && password == "admin"){
-      var d = new Date();
-      d.setTime(d.getTime() + (30*24*60*60*1000));
-      var expires = "expires=" + d.toGMTString();
-      document.cookie = "username=TheFallingPie" + expires;
+      document.cookie = "username=TheFallingPie";
       alert ("Login successfully");
       window.location = "dashboard.html";
       return false;
     } else if ( username == "toni" && password == "admin"){
-      var d = new Date();
-      d.setTime(d.getTime() + (30*24*60*60*1000));
-      var expires = "expires=" + d.toGMTString();
-      document.cookie = "username=Toni" + expires;
+      document.cookie = "username=Toni";
       alert ("Login successfully");
       window.location = "dashboard.html";
       return false;
