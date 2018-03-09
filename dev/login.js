@@ -2,6 +2,7 @@
   function validate(){
     var username = document.getElementById("username").value;
     var password = document.getElementById("password").value;
+    
     if ( username == "nasty" && password == "admin1"){
       var d = new Date();
       d.setTime(d.getTime() + (30*24*60*60*1000));
@@ -26,7 +27,7 @@
       alert ("Login successfully");
       window.location = "dashboard.html";
       return false;
-    } else{
+    } else {
       attempt --;// Decrementing by one.
       alert("You have left "+attempt+" attempt;");
       // Disabling fields after 3 attempts.
