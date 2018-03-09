@@ -11,13 +11,13 @@
             } else {
                 setCookie('access_token', 'delet this', -100000);
                 alert("[ALERT] >> You need to log in inorder to access this page!");
-                window.location = "../index.html";
+                window.location.href = "https://nastyybot.github.io/";
             }
             
             function logout() {
                 setCookie('access_token', 'delet this', -100000);
                 alert("[NOTICE] >> Logout successful! Redirecting to main page...");
-                window.location = "../index.html";
+                window.location.href = "https://nastyybot.github.io/";
             }
             
             function getCookie(cname) {
