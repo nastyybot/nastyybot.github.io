@@ -4,10 +4,7 @@
     <link rel="icon" href="..assets/img/Nasty Logo.png">
     <script>
       function checkCookie(){
-        var d = new Date();
-        d.setTime(d.getTime() + (30*24*60*60*1000));
-        var expires = "expires=" + d.toGMTString();
-        if(document.cookie == 'username="ItsJustNasty" + expires' || document.cookie == 'username="TheFallingPie" + expires' || document.cookie == 'username="Toni"'+ expires){
+        if(document.cookie == 'username="ItsJustNasty"' || document.cookie == 'username="TheFallingPie"' || document.cookie == 'username="Toni"'){
           return;
         } else {
           alert('[ALERT] >> You do not have access to this page.');
