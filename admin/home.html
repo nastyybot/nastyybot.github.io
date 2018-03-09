@@ -86,21 +86,19 @@
             }
         </style>
         <script>
-            var d_user_id = [];
-            function checkDev(){
-                if(d_user_id = '204483358909136896' || '206224619902992385' || '265071448182358018'){
-                    document.getElementById('authentic').style.display = 'block'; 
-                } else {
-                    return;
-                }
-              }
             let xhr = new XMLHttpRequest()
             xhr.open('GET', 'https://discordapp.com/api/v6/users/@me', true);
             xhr.setRequestHeader('Authorization', getCookie('token_type') + " " + getCookie('access_token'));
             xhr.send();
             xhr.onloadend = (e) => {
                 let user = JSON.parse(xhr.responseText);
-                 d_user_id.push({user.id});
+                function checkDev(){
+                    if(d_user_id = '204483358909136896' || '206224619902992385' || '265071448182358018'){
+                        document.getElementById('authentic').style.display = 'block'; 
+                    } else {
+                        return;
+                    }
+                  }
             };
         </script>
     </head>
