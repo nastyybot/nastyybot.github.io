@@ -100,7 +100,7 @@
             xhr.send();
             xhr.onloadend = (e) => {
                 let user = JSON.parse(xhr.responseText);
-                 d_user_id.push({`${user.id}`);
+                 d_user_id.push({user.id});
             };
         </script>
     </head>
