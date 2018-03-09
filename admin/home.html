@@ -100,5 +100,25 @@
               <p><button id="authentic" type="hidden">Dev</button></p>
           </div>
         </div>
+        
+        <script>
+           if (getCookie('access_token')) {
+                let xhr = new XMLHttpRequest()
+                xhr.open('GET', 'https://discordapp.com/api/v6/users/@me', true);
+                xhr.setRequestHeader('Authorization', getCookie('token_type') + " " + getCookie('access_token'));
+                xhr.send();
+                xhr.onloadend = (e) => {
+                    let user = JSON.parse(xhr.responseText);
+                    function checkDev(){
+                      if(user.id = '204483358909136896' || '206224619902992385' || '265071448182358018'){
+                          document.getElementById('authentic').style.display = 'block'; 
+                      } else {
+                          return;
+                      }
+                    }
+                };
+            } else {
+            }
+        </script>
     </body>
 </html>
