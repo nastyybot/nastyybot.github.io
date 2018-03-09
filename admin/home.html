@@ -9,13 +9,6 @@
     	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/1.1.4/typed.min.js"></script>
         <script src="../assets/js/auth.js"></script> 
-        <script>
-            const auth_things = require('../assets/js/auth.js');
-            
-            if(user_id = '204483358909136896'){
-               console.log('JEFF YOU IS RIGHT');   
-            }
-        </script>
         
         <link href="https://fonts.googleapis.com/css?family=Nova+Flat" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
@@ -95,7 +88,7 @@
 
     </head>
 
-    <body>      
+    <body onload="checkDev()">      
         <div class="bgimg">
           <div class="middle">
             <img id="avatar" /><br/>
@@ -104,6 +97,7 @@
               <p>Join the <a href="http://bit.ly/nastyserver">Discord Server</a> for updates on this site!</p>
               <p>Sorry,<span id="userid"></span>, this site is under development.</p>
               <p><a onclick="logout();">Click here to log out</a></p>
+              <p><button id="authentic" type="hidden">Dev</button></p>
           </div>
         </div>
     </body>
