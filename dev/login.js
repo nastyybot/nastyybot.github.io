@@ -4,7 +4,7 @@
     var password = document.getElementById("password").value;
     if ( username == "nasty" && password == "admin1"){
       var d = new Date();
-      d.setTime(d.getTime() + (exdays*24*60*60*1000));
+      d.setTime(d.getTime() + (30*24*60*60*1000));
       var expires = "expires=" + d.toGMTString();
       document.cookie = "username=ItsJustNasty" + expires;
       alert ("Login successfully");
@@ -12,7 +12,7 @@
       return false;
     } else if ( username == "pie" && password == "admin"){
       var d = new Date();
-      d.setTime(d.getTime() + (exdays*24*60*60*1000));
+      d.setTime(d.getTime() + (30*24*60*60*1000));
       var expires = "expires=" + d.toGMTString();
       document.cookie = "username=TheFallingPie" + expires;
       alert ("Login successfully");
@@ -20,7 +20,7 @@
       return false;
     } else if ( username == "toni" && password == "admin"){
       var d = new Date();
-      d.setTime(d.getTime() + (exdays*24*60*60*1000));
+      d.setTime(d.getTime() + (30*24*60*60*1000));
       var expires = "expires=" + d.toGMTString();
       document.cookie = "username=Toni" + expires;
       alert ("Login successfully");
