@@ -85,22 +85,6 @@
                 color: #99AAB5;
             }
         </style>
-
-    </head>
-
-    <body onload="checkDev()">      
-        <div class="bgimg">
-          <div class="middle">
-            <img id="avatar" /><br/>
-            <h1>COMING SOON</h1>
-            <hr>
-              <p>Join the <a href="http://bit.ly/nastyserver">Discord Server</a> for updates on this site!</p>
-              <p>Sorry,<span id="userid"></span>, this site is under development.</p>
-              <p><a onclick="logout();">Click here to log out</a></p>
-              <p><button id="authentic" type="hidden">Dev</button></p>
-          </div>
-        </div>
-        
         <script>
            if (getCookie('access_token')) {
                 let xhr = new XMLHttpRequest()
@@ -120,5 +104,19 @@
             } else {
             }
         </script>
+    </head>
+
+    <body onload="checkDev()">      
+        <div class="bgimg">
+          <div class="middle">
+            <img id="avatar" /><br/>
+            <h1>COMING SOON</h1>
+            <hr>
+              <p>Join the <a href="http://bit.ly/nastyserver">Discord Server</a> for updates on this site!</p>
+              <p>Sorry,<span id="userid"></span>, this site is under development.</p>
+              <p><a onclick="logout();">Click here to log out</a></p>
+              <p><button id="authentic" type="hidden">Dev</button></p>
+          </div>
+        </div>
     </body>
 </html>
