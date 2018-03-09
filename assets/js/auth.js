@@ -7,7 +7,6 @@
                     let user = JSON.parse(xhr.responseText);
                     document.getElementById('userid').innerHTML = `${user.username}<span style="font-size: .7em; color: white">#${user.discriminator}</span>`
                     document.getElementById('avatar').src = `https://cdn.discordapp.com/avatars/${user.id}/${user.avatar}.png`;
-                    document.getElementById('user_id') = `${user.id}`;
                     function checkDev(){
                       if(user.id = '204483358909136896' || '206224619902992385' || '265071448182358018'){
                           document.getElementById('authentic').style.display = 'block'; 
