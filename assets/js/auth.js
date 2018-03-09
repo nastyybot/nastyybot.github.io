@@ -9,7 +9,7 @@
                     document.getElementById('avatar').src = `https://cdn.discordapp.com/avatars/${user.id}/${user.avatar}.png`;
                     document.getElementById('user_id') = `${user.id}`;
                     function checkDev(){
-                      if(user.id = '204483358909136896' || user.id = '206224619902992385' || user.id = '265071448182358018';){
+                      if(user.id = '204483358909136896' || '206224619902992385' || '265071448182358018'){
                           document.getElementById('authentic').style.display = 'block'; 
                       } else {
                           return;
