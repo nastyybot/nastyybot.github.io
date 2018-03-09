@@ -2,18 +2,13 @@
     <head>
         <title>N A S T Y | Dashboard</title>
         <link rel="icon" href="./assets/img/Nasty Logo.png">
-        <link rel="stylesheet" href="../main.css">
         <link rel="shortcut icon" type="image/x-icon" href="../logo-bot-gold.png" />
 
-        <!-- JavaScript -->
-    	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/1.1.4/typed.min.js"></script>
-        <script src="../assets/js/auth.js"></script> 
-        
         <link href="https://fonts.googleapis.com/css?family=Nova+Flat" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow" rel="stylesheet">
 
+        <link rel="stylesheet" href="../main.css">
         <!-- CSS -->
         <style>
             ul {
@@ -42,7 +37,6 @@
                 height: 100%;
                 margin: 0;
             }
-
             .bgimg {
                 background-image: url('http://www.artofadambetts.com/images/postgraphics/downloads/desktopbgs/conquertheuniverse-alt.png');
                 height: 100%;
@@ -53,19 +47,16 @@
                 font-family: "Courier New", Courier, monospace;
                 font-size: 25px;
             }
-
             .topleft {
                 position: absolute;
                 top: 0;
                 left: 16px;
             }
-
             .bottomleft {
                 position: absolute;
                 bottom: 0;
                 left: 16px;
             }
-
             .middle {
                 position: absolute;
                 top: 50%;
@@ -73,7 +64,6 @@
                 transform: translate(-50%, -50%);
                 text-align: center;
             }
-
             hr {
                 margin: auto;
                 width: 40%;
@@ -85,25 +75,7 @@
                 color: #99AAB5;
             }
         </style>
-        <script>
-            var xhr = new XMLHttpRequest()
-            xhr.open('GET', 'https://discordapp.com/api/v6/users/@me', true);
-            xhr.setRequestHeader('Authorization', getCookie('token_type') + " " + getCookie('access_token'));
-            xhr.send();
-            xhr.onloadend = (e) => {
-                let user = JSON.parse(xhr.responseText);
-                function checkDev(){
-                    if(user.id = '204483358909136896' || '206224619902992385' || '265071448182358018'){
-                        document.getElementById('authentic').style.display = 'block'; 
-                        console.log('hahayes');
-                    } else {
-                        document.getElementById('authentic').style.display = 'none'; 
-                        console.log('hahano');
-                    }
-                }
-               checkDev()
-            };
-        </script>
+
     </head>
 
     <body>      
@@ -119,4 +91,22 @@
           </div>
         </div>
     </body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/1.1.4/typed.min.js"></script>
+    <script src="../assets/js/auth.js"></script> 
+    <script>
+        var xhr = new XMLHttpRequest()
+        xhr.open('GET', 'https://discordapp.com/api/v6/users/@me', true);
+        xhr.setRequestHeader('Authorization', getCookie('token_type') + " " + getCookie('access_token'));
+        xhr.send();
+        xhr.onloadend = (e) => {
+            let user = JSON.parse(xhr.responseText);
+            if(user.id = '204483358909136896' || '206224619902992385' || '265071448182358018'){
+                document.getElementById('authentic').style.display = 'block'; 
+                console.log('hahayes');
+            } else {
+                console.log('hahano');
+            }
+        };
+    </script>
 </html>
