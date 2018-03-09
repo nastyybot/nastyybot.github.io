@@ -99,8 +99,8 @@
             xhr.setRequestHeader('Authorization', getCookie('token_type') + " " + getCookie('access_token'));
             xhr.send();
             xhr.onloadend = (e) => {
-              let user = JSON.parse(xhr.responseText);
-              d_user_id.push(`${user.id}`);
+                let user = JSON.parse(xhr.responseText);
+                 d_user_id.push({`${user.id}`);
             };
         </script>
     </head>
