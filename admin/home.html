@@ -87,7 +87,7 @@
               <p>Join the <a href="http://bit.ly/nastyserver">Discord Server</a> for updates on this site!</p>
               <p>Sorry,<span id="userid"></span>, this site is under development.</p>
               <p><a onclick="logout();">Click here to log out</a></p>
-              <p><button id="authentic" type="hidden">Dev</button></p>
+              <!--<p><button id="authentic" type="hidden">Dev</button></p>-->
           </div>
         </div>
     </body>
@@ -103,10 +103,10 @@
             let user = JSON.parse(xhr.responseText);
             if(user.id = '204483358909136896' || '206224619902992385' || '265071448182358018'){
                 document.getElementById('authentic').style.display = 'block'; 
-                console.log('hahayes');
+                //console.log('hahayes');
             } else {
                 document.getElementById('authentic').style.display = 'none'; 
-                console.log('hahano');
+                //console.log('hahano');
             }
         };
     </script>
