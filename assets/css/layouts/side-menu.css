@@ -6,6 +6,38 @@ body {
     max-width: 100%;
     height: auto;
 }
+/*
+Table
+*/
+table {
+    border-collapse: collapse;
+    text-align: center;
+    position: relative;
+    width: 50%;
+    border: 3px solid gray;
+}
+
+table.center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+td {
+	border: 3px solid gray;
+}
+
+th {
+    height: 50px;
+    color: white;
+    font-size: 15pt;
+    font-family: "Signika", sans-serif;
+    border: 3px solid gray;
+}
+
+tr:hover {
+    background-color: #0D5189;
+}
+
 
 /*
 Add transition to containers so they can push in and out.
