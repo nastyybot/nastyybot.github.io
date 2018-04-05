@@ -1,20 +1,39 @@
-body {
-    color: #777;
-}
-
 .pure-img-responsive {
     max-width: 100%;
     height: auto;
 }
-/*
-Table
-*/
+@font-face {
+	font-family: 'Signika';
+	font-style: normal;
+	font-weight: 700;
+	src: local('Signika Bold'), local('Signika-Bold'), url('Signika-Semibold.ttf') format('truetype');
+	unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+
+html, body, div, h1, h2, p, a {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+body {
+    color: #777;
+}
+
+*, *:before, *:after {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
 table {
     border-collapse: collapse;
     text-align: center;
     position: relative;
     width: 50%;
-    border: 3px solid gray;
 }
 
 table.center {
@@ -22,7 +41,7 @@ table.center {
     margin-right: auto;
 }
 
-td {
+table, th, td {
 	border: 3px solid gray;
 }
 
@@ -31,13 +50,83 @@ th {
     color: white;
     font-size: 15pt;
     font-family: "Signika", sans-serif;
-    border: 3px solid gray;
 }
 
 tr:hover {
     background-color: #0D5189;
 }
 
+@media screen and (max-width: 480px) {
+	html, body {
+		min-width: 320px;
+	}
+}
+
+@media screen and (max-width: 1680px) {
+	body {
+		font-size: 12pt;
+	}
+	
+	th {
+		font-size: 14pt;
+	}
+}
+
+@media screen and (max-width: 1280px) {
+	body {
+		font-size: 11pt;
+	}
+	
+	th {
+		font-size: 13pt;
+	}
+}
+
+@media screen and (max-width: 980px) {
+	body {
+		font-size: 10pt;
+	}
+	
+	th {
+		font-size: 12pt;
+	}
+}
+
+@media screen and (max-width: 736px) {
+	body {
+		font-size: 9pt;
+	}
+	
+	th {
+		font-size: 11pt;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	body {
+		font-size: 8pt;
+	}
+	
+	th {
+		font-size: 10pt;
+	}
+}
+
+@media screen and (max-width: 736px) {
+	h2 {
+		font-size: 2em;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	h2 {
+		font-size: 1.5em;
+	}
+}
+
+.align-center {
+	text-align: center;
+}
 
 /*
 Add transition to containers so they can push in and out.
