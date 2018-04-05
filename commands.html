@@ -14,16 +14,6 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     
     <style>
-    table, tr, td, th
-    {
-        border: 1px solid black;
-        border-collapse:collapse;
-    }
-
-    th, td {
-        padding: 5px;
-        text-align: left;    
-    }
     img.button_open{
       content:url('http://code.stephenmorley.org/javascript/collapsible-lists/button-open.png');
       cursor:pointer;
@@ -133,8 +123,8 @@
                         <th>Permission(s)</th>
                     </tr>
                       <!-- Copy and Paste this till ... -->
-                        <tr>
-                          <td class='clickable' width="85%">
+                        <tr class='clickable'>
+                          <td width="85%">
                               <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo2">ban (user) [reason]</button>
                               <div id="demo2" class="collapse">
                                   <br> Deletes the user from your server. Seriously, if a user has broken your Discord Rule(s), you can ban that user along with reason(optional)
