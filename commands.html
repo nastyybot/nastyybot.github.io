@@ -1,0 +1,377 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
+	<meta name="title" content="N A S T Y Website">
+	<meta name="description" content="Official Website for the Discord Bot, N A S T Y !">
+	<meta name="author" content="ItsJustNasty">
+	<meta name="image" content="http://app.nasty.bz/assets/img/Nasty%20Logo.png">
+	<meta name="theme-color" content="#00CC00">
+	<meta itemprop="name" content="N A S T Y">
+	<meta itemprop="description" content="The official website for the Discord Bot, N A S T Y !">
+	<meta itemprop="image" content="http://app.nasty.bz/assets/img/Nasty%20Logo.png">
+    
+    <title>NASTY | Commands</title>
+    
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+	<link rel="stylesheet" href="assets/css/commands.css">
+	<link rel="icon" href="assets/img/Nasty Logo.png">
+	
+	<style>
+	body, html {
+		height: 100%;
+	}
+
+	.parallax {
+		background-image: url('assets/img/background.png');
+
+		height: 100%; 
+
+		background-attachment: fixed;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+
+	.textC{
+		color: white;
+		font-size: 10mm;
+	}
+	</style>
+</head>
+<body>
+	<div class="parallax">
+		<section id="banner">
+			<div class="inner">
+				<header>
+					<h1>Command page</h1>
+					<p>Here are the full command list with description & permissions for N A S T Y </p>
+					<br><br>
+				</header>
+				<a href="#start" class="button alt">Click here to get started </a>
+				<a href="#begin" class="button alt">Just show me the command list </a>
+			</div>
+		</section>
+	</div>
+
+	<section class="wrapper style1">
+		<header class="align-center">
+			<h2 id="start">Command Usage Syntax</h2>
+			<p>Before you start, here are some legend that you should know before reading below.</p>
+			<br>
+			<table class="center">
+				<thead>
+					<tr>
+						<th>Name</th>
+						<th>Description</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Prefix</td>
+						<td>Default Prefix: // <br> You can change the prefix to your liking!</td>
+					</tr>
+
+					<tr>
+						<td>Parameter(s)</td>
+						<td>[] - Optional Parameter. <br> () - Required Parameter.</td>
+					</tr>
+					<tr>
+						<td>Permission</td>
+						<td>You can change these settings by typing //set view and //set edit {settingName}! <br><img src="settings.jpg" /><br> User: Everyone! <br> Moderator: Moderator Role [Default] <br> Administrator: Admin Role [Default] <br> Server Owner: Owner of the Server [Cannot Change!]</td>
+					</tr>
+				</tbody>
+			</table>
+		</header>
+	</section>
+	<div class="parallax" id="begin">
+			<section id="banner">
+				<div class="inner">
+					<header>
+						<h1>Lets begin!</h1>
+						<p>Here are the shortcuts to save you time!</p>
+						<p><a href="#misc">Misc/Fun</a> | <a href="#music">Music</a> | <a href="#games">Games</a> | <a href="#custom">Custom</a> | <a href="#moderator">Moderator</a></p>
+					</header>
+				</div>
+			</section>
+	</div>
+
+	<section class="wrapper style2">
+		<header class="align-center">
+			<h2 id="start">Command List</h2>
+			<h3 class="textC" id="misc">Misc/Fun Commands</h3>
+			<table class="center">
+				<thead>
+					<tr>
+						<th>Permission</th>
+						<th>Command</th>
+						<th>Description</th>
+						<th>Example</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>User</td>
+						<td>//8ball (question)</td>
+						<td>Ask the magical 8ball your question!</td>
+						<td>//8ball will you add this bot to your server?</td>
+					</tr>
+
+					<tr>
+						<td>User</td>
+						<td>//avatar (mention)</td>
+						<td>Sends the mentioned user or if you didnt mention the user, the bot will send the picture of the user's or your Profile Picture!</td>
+						<td>//avatar @ItsJustNasty#0001</td>
+					</tr>
+					<tr>
+						<td>User</td>
+						<td>//cat</td>
+						<td>Sends a cute picture. Unlimited, random cat picture from random.cat</td>
+						<td>//cat</td>
+					</tr>
+
+					<tr>
+						<td>User</td>
+						<td>//dice</td>
+						<td>Rolls the dice from 1-6.</td>
+						<td>//dice</td>
+					</tr>
+					<tr>
+						<td>User</td>
+						<td>//flip</td>
+						<td>Heads or Tails? Not rigged i swear.</td>
+						<td>//flip</td>
+					</tr>
+
+					<tr>
+						<td>User</td>
+						<td>//help (command)</td>
+						<td>The bot will send you help by sending a list of commands + link to this page. You can also do //help (command name) to get to know the command in more detail</td>
+						<td>//help invite</td>
+					</tr>
+
+					<tr>
+						<td>User</td>
+						<td>//hug</td>
+						<td>Share the love! But you can't share love with yourself, sorry bud.</td>
+						<td>//hug @Toni#6122</td>
+					</tr>
+
+					<tr>
+						<td>User</td>
+						<td>//invite (image_file)</td>
+						<td>Inverts the colours/colors of the image that you upload it with the command. Must attach a picture to use the command!</td>
+						<td>//invite (image_file)</td>
+					</tr>
+					<tr>
+						<td>User</td>
+						<td>//invite</td>
+						<td>Invite the bot!</td>
+						<td>//invite</td>
+					</tr>
+
+					<tr>
+						<td>User</td>
+						<td>//list</td>
+						<td>Shows every single server that the bot is in!</td>
+						<td>//list</td>
+					</tr>
+
+					<tr>
+						<td>User</td>
+						<td>//ping</td>
+						<td>Sends the bot's Heartrate Beat & Message Timestamp.</td>
+						<td>//ping</td>
+					</tr>
+
+					<tr>
+						<td>User</td>
+						<td>//pixelate (image_file)</td>
+						<td>Converts the original picture into a pixelated picture.</td>
+						<td>//pixelate (image_file)</td>
+					</tr>
+					<tr>
+						<td>User</td>
+						<td>//pong</td>
+						<td>Uhhh ping? Pong? What is going on? What is life? Am I scripted? Whaaaaaaaattt????</td>
+						<td>//pong</td>
+					</tr>
+
+					<tr>
+						<td>User</td>
+						<td>//search (item)</td>
+						<td>Google search in Discord! You can search for an item without heading to google.com.</td>
+						<td>//search ItsJustNasty Twitch so that i can follow it xd</td>
+					</tr>
+					<tr>
+						<td>User</td>
+						<td>//serverinfo</td>
+						<td>Sends the server's info</td>
+						<td>//serverinfo</td>
+					</tr>
+
+					<tr>
+						<td>User</td>
+						<td>//stats</td>
+						<td>Sends the bot's stats such as Uptime, Bot's Version and etc.</td>
+						<td>//stats</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<br>
+			<br>
+			<h1 class="textC" id="music">Music</h1>
+			
+			<table class="center">
+				<thead>
+					<tr>
+						<th>Permission</th>
+						<th>Command</th>
+						<th>Description</th>
+						<th>Example</th>
+					</tr>
+					</thead>
+				<tbody>
+					<tr>
+						<td>User</td>
+						<td>//join</td>
+						<td>The bot will join the voice channel that you are in, not out.</td>
+						<td>//join</td>
+					</tr>
+
+					<tr>
+						<td>User</td>
+						<td>//play (songName)</td>
+						<td>Using the YouTube API, the bot will search and play the song name!</td>
+						<td>//play rick roll (outdated joke i know)</td>
+					</tr>
+					
+					<tr>
+						<td>User</td>
+						<td>//queue</td>
+						<td>Shows the current song and upcoming songs!</td>
+						<td>//queue</td>
+					</tr>
+
+					<tr>
+						<td>User</td>
+						<td>//radio</td>
+						<td>Sends a whole lists of radio that you can choose from. Supports English & Dutch Radio Stations! More coming soon! Just suggest which language/radio station streaming link and I will try my best to upload it to the bot as soon as possible.</td>
+						<td>//radio fallout</td>
+					</tr>
+					<tr>
+						<td>User</td>
+						<td>//leave</td>
+						<td>The bot will leave the voice channel. You need to be in a voice channel for this command to work!</td>
+						<td>//leave</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<br>
+			<h1 class="textC" id="games">Games</h1>
+			<table class="center">
+				<thead>
+					<tr>
+						<th>Permission</th>
+						<th>Command</th>
+						<th>Description</th>
+						<th>Example</th>
+					</tr>
+					</thead>
+				<tbody>
+					<tr>
+						<td>User</td>
+						<td>//mc (server_ip)</td>
+						<td>Gets the LIVE stats of the server. From Online Players to MOTD, you can see if the server is Online or Offline. [Command is unstable, it may or maynot work, depending on the API or the server]</td>
+						<td>//mc mc.hypixel.net</td>
+					</tr>
+
+					<tr>
+						<td>User</td>
+						<td>//minecraft</td>
+						<td>Gets the API status of Mojang. This command is unstable. Will be fixed as soon as possible</td>
+						<td>//minecraft</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<br>
+			<h1 class="textC" id="custom">Custom</h1>
+			<table class="center">
+				<thead>
+					<tr>
+						<th>Permission</th>
+						<th>Command</th>
+						<th>Description</th>
+						<th>Example</th>
+					</tr>
+					</thead>
+				<tbody>
+					<tr>
+						<td>Administrator</td>
+						<td>//settings</td>
+						<td>Shows the custom settings menu and you can change it according to your liking!</td>
+						<td>//setings view</td>
+					</tr>
+				</tbody>
+			</table>
+		</header>
+	</section>
+
+	<br>
+	<div class="parallax" id="moderator">
+		<section id="banner">
+			<div class="inner">
+				<header>
+					<h1>Moderator</h1>
+					<p>Here are the commands that you need Moderator Role (default or custom role that you've changed) and higher!</p>
+					<p>psst, scroll down</p>
+				</header>
+			</div>
+		</section>
+	</div>
+	<section class="wrapper style1">
+		<header class="align-center">
+				<h1 class="textC">Moderator</h1>
+				<table class="center">
+					<thead>
+						<tr>
+							<th>Permission</th>
+							<th>Command</th>
+							<th>Description</th>
+							<th>Example</th>
+						</tr>
+						</thead>
+					<tbody>
+						<tr>
+							<td>Moderator</td>
+							<td>//ban (mention) [reason]</td>
+							<td>Ban the user. Make your awesome server safe from those raiders!</td>
+							<td>//ban raider#l337</td>
+						</tr>
+						<tr>
+							<td>Moderator</td>
+							<td>//kick (mention) [reason]</td>
+							<td>Kicks the user from your server using a big ole' boot</td>
+							<td>//kick raider#l337</td>
+						</tr>
+
+						<tr>
+							<td>[UNDER DEVELOPMENT | DO NOT TRY THIS AT HOME]</td>
+							<td>//warn (user) (reason)</td>
+							<td>Not a good boy? You can warn the user with reason and the bot will remember it until you pardon it using clearwarn command</td>
+							<td>//warn @Toni#6122 get to work and finish this command!</td>
+						</tr>
+					</tbody>
+				</table>
+		</header>
+	</section>
+</body>
+</html>
